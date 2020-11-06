@@ -6,7 +6,7 @@ mod tests {
     }
 }
 
-mod basic {
+pub mod basic {
 
     use std::cmp;
 
@@ -54,6 +54,7 @@ mod basic {
         return a * b / hcf(a, b);
     }
 
+    #[cfg(test)]
     mod tests {
         use super::*;
 
@@ -140,7 +141,7 @@ mod basic {
 
 }
 
-mod prime_sieves {
+pub mod prime_sieves {
 
     pub fn primes_to(n: u32) -> Vec<u32> {
         
@@ -250,6 +251,7 @@ mod prime_sieves {
         return ((x / 2) * 6 + 1 + (x % 2) * 4) as u32;
     }
 
+    #[cfg(test)]
     mod tests {
         use super::*;
 
